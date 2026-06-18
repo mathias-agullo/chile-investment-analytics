@@ -109,12 +109,16 @@ source .venv/bin/activate        # Linux / macOS
 # 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. (Optional) Configure BCCh API credentials
+# 4. (Optional) Configure API credentials
 cp .env.example .env
-# Edit .env with your BCCh SI3 credentials:
+# Edit .env with your credentials:
+#
+#   BCCh SI3 — live macro/rates data (register at https://si3.bcentral.cl):
 #   BCCH_USER=your_email@example.com
 #   BCCH_PASS=your_password
-# Register at: https://si3.bcentral.cl
+#
+#   Groq — AI analyst commentary in each tab (free at https://console.groq.com):
+#   GROQ_API_KEY=your_groq_api_key
 
 # 5. Run the dashboard
 streamlit run app.py
@@ -124,6 +128,9 @@ streamlit run app.py
 > realistic synthetic series that mirror actual Chilean macro dynamics
 > (TPM trajectory, IPC peaks, IMACEC, FX, copper). All models run
 > identically on real or synthetic data.
+>
+> **Without a Groq API key** the 🤖 AI analyst commentary buttons are
+> simply hidden — all three analytical modules remain fully functional.
 
 ---
 
@@ -170,6 +177,7 @@ BCCh API documentation: <https://si3.bcentral.cl/estadisticas/Principal1>
 | yfinance | 1.4.1 | Yahoo Finance data |
 | bcchapi | 1.1.2 | BCCh statistical API |
 | python-dotenv | 1.0.1 | Environment variable management |
+| groq | ≥0.9.0 | AI analyst commentary (Llama 3.3 70B) |
 
 ---
 
