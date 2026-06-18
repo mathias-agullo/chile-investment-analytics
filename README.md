@@ -33,6 +33,7 @@ Yahoo Finance.
 - Backtesting vs. IPSA benchmark (configurable 6–24 month window)
 - Risk-free rate: BCCh Tasa de Política Monetaria (TPM)
 - Interactive Plotly scatter, pie charts, and correlation heatmap
+- 🤖 AI analyst commentary via Groq (Llama 3.3 70B) — portfolio interpretation in EN/ES
 
 **Reference:** Markowitz, H. (1952). Portfolio Selection.
 *Journal of Finance*, 7(1), 77–91.
@@ -54,13 +55,14 @@ variables loaded from the BCCh Statistical Database (`bcchapi`):
 
 **Key features:**
 - Augmented Dickey-Fuller stationarity tests with automatic differencing
-- Lag selection via AIC / BIC (up to 12 lags)
+- Lag selection via HQIC with cap T/(5k) to prevent overfitting
 - Orthogonalised IRF with Cholesky identification (recursive ordering:
   Copper → USD/CLP → IMACEC → IPC → TPM)
 - 95% confidence bands via parametric residual bootstrap (300 replications)
 - 12-month VAR forecast with confidence intervals (`forecast_interval`)
 - Forecast Error Variance Decomposition (FEVD) — stacked bar chart
 - Interactive variable selector for shock and response variables
+- 🤖 AI analyst commentary via Groq (Llama 3.3 70B) — macro interpretation in EN/ES
 
 **Reference:** Sims, C.A. (1980). Macroeconomics and Reality.
 *Econometrica*, 48(1), 1–48.
@@ -88,6 +90,7 @@ Analyses the **Chilean sovereign yield curve** (BCP and BCU bonds at
 - **Interactive bond pricing calculator**: given face value, coupon,
   maturity, and YTM → clean price, durations, convexity, DV01,
   and price/yield sensitivity curve
+- 🤖 AI analyst commentary via Groq (Llama 3.3 70B) — BEI curve interpretation in EN/ES
 
 **Reference:** Nelson, C.R. & Siegel, A.F. (1987). Parsimonious Modeling
 of Yield Curves. *Journal of Business*, 60(4), 473–489.
