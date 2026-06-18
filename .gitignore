@@ -1,6 +1,9 @@
 # Credentials — NEVER commit
 .env
 
+# Logs
+*.log
+
 # Python
 __pycache__/
 *.py[cod]
